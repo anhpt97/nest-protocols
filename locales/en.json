@@ -1,0 +1,10 @@
+{
+  "DISABLED_USER": "Account has been disabled",
+  "EXPIRED_TOKEN": "Token has expired",
+  "INCORRECT_PASSWORD": "Incorrect password",
+  "INTERNAL_SERVER_ERROR": "Internal Server Error",
+  "INVALID_INPUT": "Invalid input",
+  "INVALID_TOKEN": "Invalid token",
+  "UNACTIVATED_USER": "Account has not been activated",
+  "USER_NOT_FOUND": "User not found"
+}

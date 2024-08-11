@@ -1,0 +1,19 @@
+image: node:alpine
+
+cache:
+  paths:
+    - node_modules/
+
+install_dependencies:
+  stage: .pre
+  script: yarn
+
+build:
+  stage: build
+  script: yarn build
+
+test:
+  stage: test
+  script:
+    - yarn lint --max-warnings=0
+    - yarn tsc --noEmit
