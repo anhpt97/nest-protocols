@@ -30,6 +30,9 @@ export declare global {
       JWT_SECRET_KEY?: string;
 
       MQTT_URL?: string;
+
+      REDIS_HOST?: string;
+      REDIS_PORT?: string;
     }
   }
 }

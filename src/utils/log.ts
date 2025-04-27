@@ -5,7 +5,8 @@ import { Console, File } from 'winston/lib/winston/transports';
 
 const logger = createLogger({
   format: format.printf(
-    ({ message }) => `${bgRed(new Date().toISOString())} — ${message}\n`,
+    ({ message }) =>
+      `${bgRed(new Date().toISOString())} — ${message as string}\n`,
   ),
   transports: [
     new Console(),

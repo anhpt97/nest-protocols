@@ -5,6 +5,7 @@ import cluster from 'cluster';
 import 'dotenv/config';
 import { availableParallelism } from 'os';
 import { AppModule } from './app.module';
+import { RedisIoAdapter } from './common/adapters';
 import { APP_NAME, PORT } from './common/constants';
 import { i18n } from './common/middlewares';
 
@@ -16,6 +17,8 @@ const bootstrap = async () => {
   app.setGlobalPrefix('api', {
     exclude: [{ path: '', method: RequestMethod.GET }],
   });
+
+  app.useWebSocketAdapter(new RedisIoAdapter(app));
 
   SwaggerModule.setup(
     'api-docs',

@@ -24,3 +24,6 @@ export const JWT_EXP_TIME =
 export const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY;
 
 export const MQTT_URL = process.env.MQTT_URL;
+
+export const REDIS_HOST = process.env.REDIS_HOST;
+export const REDIS_PORT = Number(process.env.REDIS_PORT);
